@@ -1,0 +1,962 @@
+{
+  "site": {
+    "name": "资源星图",
+    "headline": "探索值得收藏的资源",
+    "tagline": "让工具、灵感与知识触手可及",
+    "searchPlaceholder": "搜索资源、关键词或标签…",
+    "footerText": "优质资源 · 连接更大的可能",
+    "about": "资源星图收集前端开发、在线工具、开源软件、技术文档、设计素材与开放数据等常用站点。你可以通过分类或搜索快速发现所需内容，也可以在配置文件中维护自己的资源清单。",
+    "accentColor": "#50e4f6"
+  },
+  "categories": [
+    { "id": "development", "name": "开发工具" },
+    { "id": "online-tools", "name": "在线工具" },
+    { "id": "design", "name": "设计灵感" },
+    { "id": "learning", "name": "学习资料" },
+    { "id": "productivity", "name": "效率工具" },
+    { "id": "ai", "name": "人工智能" },
+    { "id": "frontend", "name": "前端开发" },
+    { "id": "opensource", "name": "开源项目" },
+    { "id": "software", "name": "开源软件" },
+    { "id": "documentation", "name": "技术文档" },
+    { "id": "materials", "name": "图标素材" },
+    { "id": "images", "name": "灵感图库" },
+    { "id": "community", "name": "社区论坛" },
+    { "id": "data", "name": "数据资源" }
+  ],
+  "resources": [
+    {
+      "id": "mdn",
+      "categoryId": "documentation",
+      "title": "MDN 文档",
+      "url": "https://developer.mozilla.org/zh-CN/",
+      "description": "MDN Web Docs 提供全面的 Web 技术文档，涵盖 HTML、CSS、JavaScript 和浏览器 API。适合查阅标准、学习新知识，以及解决开发中的实际问题。",
+      "tags": ["前端开发", "技术文档"],
+      "icon": "M",
+      "iconUrl": "https://developer.mozilla.org/favicon.ico",
+      "iconColor": "#e7f0ff",
+      "pinned": true,
+      "priority": 100
+    },
+    {
+      "id": "github",
+      "categoryId": "opensource",
+      "title": "GitHub",
+      "url": "https://github.com/",
+      "description": "托管代码、协作开发并发现全球优秀开源项目的平台。可用于版本管理、问题追踪、代码审查和自动化工作流。",
+      "tags": ["代码托管", "开源"],
+      "icon": "GH",
+      "iconUrl": "https://github.com/favicon.ico",
+      "iconBackground": "#eaf0f6",
+      "iconColor": "#f3f7ff",
+      "pinned": true,
+      "priority": 90
+    },
+    {
+      "id": "figma",
+      "categoryId": "design",
+      "title": "Figma",
+      "url": "https://www.figma.com/",
+      "description": "在线协作的界面设计工具，支持团队共同创作、原型演示以及设计交付。",
+      "tags": ["界面设计", "协作"],
+      "icon": "F",
+      "iconUrl": "https://www.figma.com/favicon.ico",
+      "iconColor": "#a080ff",
+      "pinned": true,
+      "priority": 80
+    },
+    {
+      "id": "caniuse",
+      "categoryId": "frontend",
+      "title": "Can I Use",
+      "url": "https://caniuse.com/",
+      "description": "查询前端 Web 技术在各个浏览器中的支持情况，帮助开发者作出兼容性决策。",
+      "tags": ["浏览器兼容", "前端开发"],
+      "icon": "C",
+      "iconUrl": "https://www.google.com/s2/favicons?domain=caniuse.com&sz=128",
+      "iconColor": "#35e879",
+      "priority": 40
+    },
+    {
+      "id": "notion",
+      "categoryId": "productivity",
+      "title": "Notion",
+      "url": "https://www.notion.so/",
+      "description": "集笔记、知识库与项目协作于一体，帮助你整理信息并与团队共享工作空间。",
+      "tags": ["知识管理", "协作"],
+      "icon": "N",
+      "iconUrl": "https://www.notion.so/images/favicon.ico",
+      "iconColor": "#ffffff",
+      "priority": 35
+    },
+    {
+      "id": "excalidraw",
+      "categoryId": "design",
+      "title": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "description": "开源的手绘风格在线白板，适合快速绘制流程、草图与团队讨论示意图。",
+      "tags": ["白板", "开源"],
+      "icon": "✕",
+      "iconUrl": "https://excalidraw.com/favicon.ico",
+      "iconColor": "#987bff",
+      "priority": 30
+    },
+    {
+      "id": "freecodecamp",
+      "categoryId": "learning",
+      "title": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/",
+      "description": "通过免费课程、练习项目和开发者社区，循序渐进地学习编程与 Web 开发。",
+      "tags": ["编程学习", "课程"],
+      "icon": "FC",
+      "iconUrl": "https://www.freecodecamp.org/favicon.ico",
+      "iconColor": "#d5e887",
+      "priority": 25
+    },
+    {
+      "id": "huggingface",
+      "categoryId": "ai",
+      "title": "Hugging Face",
+      "url": "https://huggingface.co/",
+      "description": "探索机器学习模型、数据集和演示空间，并与社区分享人工智能项目。",
+      "tags": ["模型", "数据集"],
+      "icon": "HF",
+      "iconUrl": "https://huggingface.co/favicon.ico",
+      "iconColor": "#ffc973",
+      "priority": 20
+    },
+    {
+      "id": "googlefonts",
+      "categoryId": "materials",
+      "title": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "description": "浏览并使用开放字体资源，为网站和设计作品选择合适的字形。",
+      "tags": ["字体", "设计素材"],
+      "icon": "G",
+      "iconUrl": "https://fonts.google.com/favicon.ico",
+      "iconColor": "#82b5ff",
+      "priority": 15
+    },
+    {
+      "id": "unsplash",
+      "categoryId": "images",
+      "title": "Unsplash",
+      "url": "https://unsplash.com/",
+      "description": "发现来自摄影师社区的图片，为创作寻找视觉灵感和素材。使用前请查看对应授权条款。",
+      "tags": ["摄影", "图片"],
+      "icon": "U",
+      "iconUrl": "https://unsplash.com/favicon.ico",
+      "iconBackground": "#eaf0f6",
+      "iconColor": "#f5f8ff",
+      "priority": 10
+    },
+    {
+      "id": "stackoverflow",
+      "categoryId": "community",
+      "title": "Stack Overflow",
+      "url": "https://stackoverflow.com/",
+      "description": "开发者问答社区，可搜索常见编程问题、技术讨论与解决方案。",
+      "tags": ["问答", "开发社区"],
+      "icon": "SO",
+      "iconUrl": "https://stackoverflow.com/favicon.ico",
+      "iconColor": "#f59e62",
+      "priority": 5
+    },
+    {
+      "id": "openstreetmap",
+      "categoryId": "data",
+      "title": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/",
+      "description": "由社区维护的开放地图数据，可用于地理信息查询、地图应用和数据研究。",
+      "tags": ["开放数据", "地图"],
+      "icon": "OS",
+      "iconUrl": "https://www.openstreetmap.org/favicon.ico",
+      "iconColor": "#9cda8a",
+      "priority": 0
+    },
+    {
+      "id": "vscode",
+      "categoryId": "development",
+      "title": "Visual Studio Code",
+      "url": "https://code.visualstudio.com/",
+      "description": "常用代码编辑器，支持扩展、调试、终端和 Git 工作流。适合编写前端及多语言项目。",
+      "tags": [
+        "代码编辑器",
+        "开发工具"
+      ],
+      "icon": "VS",
+      "iconColor": "#58b9ff",
+      "priority": 55
+    },
+    {
+      "id": "chrome-devtools",
+      "categoryId": "development",
+      "title": "Chrome DevTools",
+      "url": "https://developer.chrome.com/docs/devtools/",
+      "description": "Chrome 浏览器内置的开发工具文档，可学习元素检查、网络分析、性能调试与 JavaScript 断点。",
+      "tags": [
+        "浏览器调试",
+        "性能"
+      ],
+      "icon": "CD",
+      "iconColor": "#7de2ca",
+      "priority": 42
+    },
+    {
+      "id": "gitlab",
+      "categoryId": "development",
+      "title": "GitLab",
+      "url": "https://about.gitlab.com/",
+      "description": "提供代码托管、合并请求和持续集成等开发协作能力。",
+      "tags": [
+        "代码托管",
+        "协作"
+      ],
+      "icon": "GL",
+      "iconColor": "#ff9a67",
+      "priority": 18
+    },
+    {
+      "id": "playwright",
+      "categoryId": "development",
+      "title": "Playwright",
+      "url": "https://playwright.dev/",
+      "description": "跨 Chromium、Firefox 和 WebKit 的浏览器自动化工具，适合端到端测试与网页交互脚本。",
+      "tags": [
+        "自动化测试",
+        "浏览器"
+      ],
+      "icon": "PW",
+      "iconColor": "#84df8b",
+      "priority": 28
+    },
+    {
+      "id": "webdev",
+      "categoryId": "frontend",
+      "title": "web.dev",
+      "url": "https://web.dev/",
+      "description": "Google 的 Web 开发学习与实践资料，覆盖性能、可访问性、PWA 和现代浏览器能力。",
+      "tags": [
+        "前端开发",
+        "性能"
+      ],
+      "icon": "WD",
+      "iconColor": "#9dc4ff",
+      "priority": 50
+    },
+    {
+      "id": "wai-tutorials",
+      "categoryId": "frontend",
+      "title": "W3C WAI 教程",
+      "url": "https://www.w3.org/WAI/tutorials/",
+      "description": "W3C 提供的网页无障碍教程，按图片、表格和界面组件等常见任务讲解实现方法。",
+      "tags": [
+        "无障碍",
+        "Web 标准"
+      ],
+      "icon": "W3",
+      "iconColor": "#b4d8ff",
+      "priority": 26
+    },
+    {
+      "id": "vite",
+      "categoryId": "frontend",
+      "title": "Vite",
+      "url": "https://vite.dev/",
+      "description": "前端开发与构建工具，提供快速启动、模块热更新和现代项目模板。",
+      "tags": [
+        "构建工具",
+        "前端开发"
+      ],
+      "icon": "V",
+      "iconColor": "#bda1ff",
+      "priority": 32
+    },
+    {
+      "id": "bootstrap",
+      "categoryId": "frontend",
+      "title": "Bootstrap",
+      "url": "https://getbootstrap.com/",
+      "description": "提供响应式布局、预制组件和实用样式的前端界面工具包。",
+      "tags": [
+        "CSS",
+        "组件"
+      ],
+      "icon": "B",
+      "iconColor": "#b391ff",
+      "priority": 12
+    },
+    {
+      "id": "react-docs",
+      "categoryId": "documentation",
+      "title": "React 文档",
+      "url": "https://react.dev/learn",
+      "description": "React 官方入门与参考文档，讲解组件、状态、事件和界面更新等核心概念。",
+      "tags": [
+        "React",
+        "官方文档"
+      ],
+      "icon": "R",
+      "iconColor": "#7adfff",
+      "priority": 45
+    },
+    {
+      "id": "vue-docs",
+      "categoryId": "documentation",
+      "title": "Vue 文档",
+      "url": "https://vuejs.org/guide/introduction.html",
+      "description": "Vue 官方指南，涵盖响应式、模板、组件以及应用开发中的常用模式。",
+      "tags": [
+        "Vue",
+        "官方文档"
+      ],
+      "icon": "V",
+      "iconColor": "#7fe3ad",
+      "priority": 43
+    },
+    {
+      "id": "typescript-docs",
+      "categoryId": "documentation",
+      "title": "TypeScript 手册",
+      "url": "https://www.typescriptlang.org/docs/handbook/",
+      "description": "TypeScript 官方手册，系统介绍类型、函数、对象、泛型和模块等语言能力。",
+      "tags": [
+        "TypeScript",
+        "官方文档"
+      ],
+      "icon": "TS",
+      "iconColor": "#85bdff",
+      "priority": 41
+    },
+    {
+      "id": "node-docs",
+      "categoryId": "documentation",
+      "title": "Node.js API 文档",
+      "url": "https://nodejs.org/api/",
+      "description": "Node.js 官方 API 索引，可查询文件系统、网络、进程、流与测试等内置模块。",
+      "tags": [
+        "Node.js",
+        "API"
+      ],
+      "icon": "JS",
+      "iconColor": "#a9dc85",
+      "priority": 24
+    },
+    {
+      "id": "next-docs",
+      "categoryId": "documentation",
+      "title": "Next.js 文档",
+      "url": "https://nextjs.org/docs",
+      "description": "Next.js 官方文档，包含入门、路由、数据处理与部署相关指南。",
+      "tags": [
+        "Next.js",
+        "React"
+      ],
+      "icon": "N",
+      "iconColor": "#f0f2f5",
+      "priority": 23
+    },
+    {
+      "id": "svelte-docs",
+      "categoryId": "documentation",
+      "title": "Svelte 文档",
+      "url": "https://svelte.dev/docs",
+      "description": "Svelte 官方文档入口，提供语言参考、教程和 SvelteKit 开发资料。",
+      "tags": [
+        "Svelte",
+        "官方文档"
+      ],
+      "icon": "S",
+      "iconColor": "#ff9c79",
+      "priority": 22
+    },
+    {
+      "id": "vite-docs",
+      "categoryId": "documentation",
+      "title": "Vite 指南",
+      "url": "https://vite.dev/guide/",
+      "description": "Vite 官方使用指南，适合查阅项目创建、开发服务器、构建及插件配置。",
+      "tags": [
+        "Vite",
+        "官方文档"
+      ],
+      "icon": "VG",
+      "iconColor": "#c4a4ff",
+      "priority": 21
+    },
+    {
+      "id": "tailwind-docs",
+      "categoryId": "documentation",
+      "title": "Tailwind CSS 文档",
+      "url": "https://tailwindcss.com/docs",
+      "description": "Tailwind CSS 官方文档，可检索实用类、主题定制与布局样式。",
+      "tags": [
+        "Tailwind CSS",
+        "CSS"
+      ],
+      "icon": "TW",
+      "iconColor": "#77dbe6",
+      "priority": 20
+    },
+    {
+      "id": "codepen",
+      "categoryId": "online-tools",
+      "title": "CodePen",
+      "url": "https://codepen.io/",
+      "description": "在线编写并实时预览 HTML、CSS 与 JavaScript，适合制作小型演示和复现问题。",
+      "tags": [
+        "在线编辑器",
+        "前端"
+      ],
+      "icon": "CP",
+      "iconColor": "#f2f5ff",
+      "priority": 38
+    },
+    {
+      "id": "stackblitz",
+      "categoryId": "online-tools",
+      "title": "StackBlitz",
+      "url": "https://stackblitz.com/",
+      "description": "浏览器中的开发环境，适合快速创建前端示例、分享项目和验证代码。",
+      "tags": [
+        "在线开发",
+        "代码演示"
+      ],
+      "icon": "SB",
+      "iconColor": "#90c7ff",
+      "priority": 36
+    },
+    {
+      "id": "regex101",
+      "categoryId": "online-tools",
+      "title": "regex101",
+      "url": "https://regex101.com/",
+      "description": "在线测试和解释正则表达式，可查看匹配结果、分组与语法说明。",
+      "tags": [
+        "正则表达式",
+        "调试"
+      ],
+      "icon": "RE",
+      "iconColor": "#f4c76e",
+      "priority": 17
+    },
+    {
+      "id": "diffchecker",
+      "categoryId": "online-tools",
+      "title": "Diffchecker",
+      "url": "https://www.diffchecker.com/",
+      "description": "对比两段文本或代码的差异，适合检查配置和文档改动。",
+      "tags": [
+        "文本对比",
+        "开发工具"
+      ],
+      "icon": "DF",
+      "iconColor": "#9ec6ff",
+      "priority": 16
+    },
+    {
+      "id": "squoosh",
+      "categoryId": "online-tools",
+      "title": "Squoosh",
+      "url": "https://squoosh.app/",
+      "description": "在浏览器中压缩和转换图片，并直观比较处理前后的质量与文件大小。",
+      "tags": [
+        "图片压缩",
+        "Web 性能"
+      ],
+      "icon": "SQ",
+      "iconColor": "#9de6ce",
+      "priority": 15
+    },
+    {
+      "id": "photopea",
+      "categoryId": "online-tools",
+      "title": "Photopea",
+      "url": "https://www.photopea.com/",
+      "description": "浏览器内的图片编辑器，支持图层、蒙版等常见图像处理操作。",
+      "tags": [
+        "图片编辑",
+        "设计"
+      ],
+      "icon": "P",
+      "iconColor": "#b0dc8d",
+      "priority": 14
+    },
+    {
+      "id": "diagrams",
+      "categoryId": "online-tools",
+      "title": "draw.io",
+      "url": "https://app.diagrams.net/",
+      "description": "在线绘制流程图、架构图、UML 图和数据库关系图。",
+      "tags": [
+        "绘图",
+        "流程图"
+      ],
+      "icon": "DI",
+      "iconColor": "#ffae7d",
+      "priority": 13
+    },
+    {
+      "id": "pagespeed",
+      "categoryId": "online-tools",
+      "title": "PageSpeed Insights",
+      "url": "https://pagespeed.web.dev/",
+      "description": "输入网页地址查看页面性能、体验指标与优化建议。",
+      "tags": [
+        "性能检测",
+        "网站分析"
+      ],
+      "icon": "PS",
+      "iconColor": "#92c1ff",
+      "priority": 12
+    },
+    {
+      "id": "vscodium",
+      "categoryId": "software",
+      "title": "VSCodium",
+      "url": "https://vscodium.com/",
+      "description": "基于 VS Code 开源代码构建的社区发行版，提供跨平台代码编辑环境。",
+      "tags": [
+        "开源软件",
+        "代码编辑器"
+      ],
+      "icon": "VC",
+      "iconColor": "#8ec8ff",
+      "priority": 25
+    },
+    {
+      "id": "blender",
+      "categoryId": "software",
+      "title": "Blender",
+      "url": "https://www.blender.org/",
+      "description": "自由开源的 3D 创作套件，支持建模、动画、渲染与视频合成。",
+      "tags": [
+        "开源软件",
+        "3D"
+      ],
+      "icon": "BL",
+      "iconColor": "#ffb16f",
+      "priority": 22
+    },
+    {
+      "id": "gimp",
+      "categoryId": "software",
+      "title": "GIMP",
+      "url": "https://www.gimp.org/",
+      "description": "自由软件图像编辑器，可用于照片修饰、图像合成和绘画创作。",
+      "tags": [
+        "开源软件",
+        "图像编辑"
+      ],
+      "icon": "GI",
+      "iconColor": "#d7c69a",
+      "priority": 20
+    },
+    {
+      "id": "obs",
+      "categoryId": "software",
+      "title": "OBS Studio",
+      "url": "https://obsproject.com/",
+      "description": "免费开源的录屏与直播软件，支持多场景切换和音视频源混合。",
+      "tags": [
+        "开源软件",
+        "录屏"
+      ],
+      "icon": "OB",
+      "iconColor": "#cdb8e8",
+      "priority": 19
+    },
+    {
+      "id": "inkscape",
+      "categoryId": "software",
+      "title": "Inkscape",
+      "url": "https://inkscape.org/",
+      "description": "自由开源的矢量绘图软件，适合制作 SVG 插画、图标和技术图示。",
+      "tags": [
+        "开源软件",
+        "矢量绘图"
+      ],
+      "icon": "IN",
+      "iconColor": "#e6e8eb",
+      "priority": 18
+    },
+    {
+      "id": "libreoffice",
+      "categoryId": "software",
+      "title": "LibreOffice",
+      "url": "https://www.libreoffice.org/",
+      "description": "开源办公套件，提供文档、表格、演示文稿和绘图等工具。",
+      "tags": [
+        "开源软件",
+        "办公"
+      ],
+      "icon": "LO",
+      "iconColor": "#a4dfae",
+      "priority": 17
+    },
+    {
+      "id": "krita",
+      "categoryId": "software",
+      "title": "Krita",
+      "url": "https://krita.org/en/",
+      "description": "免费开源的数字绘画软件，面向插画、概念设计与动画创作。",
+      "tags": [
+        "开源软件",
+        "绘画"
+      ],
+      "icon": "KR",
+      "iconColor": "#c7a7ef",
+      "priority": 16
+    },
+    {
+      "id": "keepassxc",
+      "categoryId": "software",
+      "title": "KeePassXC",
+      "url": "https://keepassxc.org/",
+      "description": "开源密码管理器，使用本地加密数据库保存和整理账号信息。",
+      "tags": [
+        "开源软件",
+        "密码管理"
+      ],
+      "icon": "KP",
+      "iconColor": "#9eddd1",
+      "priority": 15
+    },
+    {
+      "id": "godot",
+      "categoryId": "software",
+      "title": "Godot",
+      "url": "https://godotengine.org/",
+      "description": "免费开源的游戏引擎，可创作 2D、3D 与跨平台项目。",
+      "tags": [
+        "开源软件",
+        "游戏开发"
+      ],
+      "icon": "GO",
+      "iconColor": "#a8caff",
+      "priority": 14
+    },
+    {
+      "id": "zotero",
+      "categoryId": "software",
+      "title": "Zotero",
+      "url": "https://www.zotero.org/",
+      "description": "开源文献管理软件，可收集、整理、标注资料并生成引用。",
+      "tags": [
+        "开源软件",
+        "知识管理"
+      ],
+      "icon": "Z",
+      "iconColor": "#ef9898",
+      "priority": 13
+    },
+    {
+      "id": "javascript-info",
+      "categoryId": "learning",
+      "title": "现代 JavaScript 教程",
+      "url": "https://javascript.info/",
+      "description": "从语言基础到浏览器接口的系统化 JavaScript 教程，配有示例和练习。",
+      "tags": [
+        "JavaScript",
+        "教程"
+      ],
+      "icon": "JS",
+      "iconColor": "#f6d972",
+      "priority": 18
+    },
+    {
+      "id": "odin-project",
+      "categoryId": "learning",
+      "title": "The Odin Project",
+      "url": "https://www.theodinproject.com/",
+      "description": "免费的 Web 开发学习路径，以项目练习串联基础知识与实战技能。",
+      "tags": [
+        "Web 开发",
+        "课程"
+      ],
+      "icon": "OP",
+      "iconColor": "#d1b18e",
+      "priority": 17
+    },
+    {
+      "id": "roadmap",
+      "categoryId": "learning",
+      "title": "roadmap.sh",
+      "url": "https://roadmap.sh/",
+      "description": "按职业方向整理开发者学习路线，可查看前端、后端和其他技术方向的知识图谱。",
+      "tags": [
+        "学习路线",
+        "开发者"
+      ],
+      "icon": "RM",
+      "iconColor": "#bdcafa",
+      "priority": 16
+    },
+    {
+      "id": "penpot",
+      "categoryId": "design",
+      "title": "Penpot",
+      "url": "https://penpot.app/",
+      "description": "开源界面设计与原型平台，支持设计团队和开发者协作。",
+      "tags": [
+        "界面设计",
+        "开源"
+      ],
+      "icon": "PP",
+      "iconColor": "#c9b4ff",
+      "priority": 24
+    },
+    {
+      "id": "heroicons",
+      "categoryId": "materials",
+      "title": "Heroicons",
+      "url": "https://heroicons.com/",
+      "description": "可搜索和复制的 SVG 图标集，并提供 React、Vue 等项目可用的组件。",
+      "tags": [
+        "SVG",
+        "图标"
+      ],
+      "icon": "HI",
+      "iconColor": "#9cc6ff",
+      "priority": 14
+    },
+    {
+      "id": "lucide",
+      "categoryId": "materials",
+      "title": "Lucide",
+      "url": "https://lucide.dev/",
+      "description": "风格统一的开源图标库，可按名称查找图标并用于多种前端框架。",
+      "tags": [
+        "图标",
+        "开源"
+      ],
+      "icon": "LU",
+      "iconColor": "#efadad",
+      "priority": 13
+    },
+    {
+      "id": "iconify",
+      "categoryId": "materials",
+      "title": "Iconify",
+      "url": "https://iconify.design/",
+      "description": "聚合多套图标集，便于检索图标并在 Web 项目中使用。",
+      "tags": [
+        "图标",
+        "素材"
+      ],
+      "icon": "IC",
+      "iconColor": "#a2ccff",
+      "priority": 12
+    },
+    {
+      "id": "pexels",
+      "categoryId": "images",
+      "title": "Pexels",
+      "url": "https://www.pexels.com/",
+      "description": "搜索摄影作品和视频素材的图库；使用素材时请查看站点授权说明。",
+      "tags": [
+        "摄影",
+        "图片素材"
+      ],
+      "icon": "PX",
+      "iconColor": "#9fe0c3",
+      "priority": 9
+    },
+    {
+      "id": "pixabay",
+      "categoryId": "images",
+      "title": "Pixabay",
+      "url": "https://pixabay.com/",
+      "description": "提供照片、插画、矢量图和视频等素材；下载前请核对对应许可条件。",
+      "tags": [
+        "图片",
+        "插画"
+      ],
+      "icon": "PB",
+      "iconColor": "#9fd1a7",
+      "priority": 8
+    },
+    {
+      "id": "devto",
+      "categoryId": "community",
+      "title": "DEV Community",
+      "url": "https://dev.to/",
+      "description": "面向开发者的文章与讨论社区，可发现技术经验、教程和项目分享。",
+      "tags": [
+        "开发社区",
+        "技术文章"
+      ],
+      "icon": "DEV",
+      "iconColor": "#f2f2f2",
+      "priority": 7
+    },
+    {
+      "id": "hackernews",
+      "categoryId": "community",
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "description": "技术与创业话题聚合社区，适合了解新项目、行业讨论和实践经验。",
+      "tags": [
+        "技术社区",
+        "资讯"
+      ],
+      "icon": "HN",
+      "iconColor": "#ffb27c",
+      "priority": 6
+    },
+    {
+      "id": "ourworldindata",
+      "categoryId": "data",
+      "title": "Our World in Data",
+      "url": "https://ourworldindata.org/",
+      "description": "以图表和研究文章呈现人口、健康、能源、环境等全球公开数据。",
+      "tags": [
+        "开放数据",
+        "可视化"
+      ],
+      "icon": "OW",
+      "iconColor": "#a7d2ff",
+      "priority": 6
+    },
+    {
+      "id": "worldbank-data",
+      "categoryId": "data",
+      "title": "世界银行开放数据",
+      "url": "https://data.worldbank.org/",
+      "description": "查询各国经济、人口、教育和发展指标，可按主题或地区浏览。",
+      "tags": [
+        "开放数据",
+        "统计"
+      ],
+      "icon": "WB",
+      "iconColor": "#9acaff",
+      "priority": 5
+    },
+    {
+      "id": "kaggle-datasets",
+      "categoryId": "data",
+      "title": "Kaggle Datasets",
+      "url": "https://www.kaggle.com/datasets",
+      "description": "发现社区共享的数据集，可用于数据分析、机器学习练习和研究。",
+      "tags": [
+        "数据集",
+        "机器学习"
+      ],
+      "icon": "KG",
+      "iconColor": "#90dfff",
+      "priority": 4
+    },
+    {
+      "id": "opensource-guides",
+      "categoryId": "opensource",
+      "title": "Open Source Guides",
+      "url": "https://opensource.guide/",
+      "description": "介绍如何发起、维护和参与开源项目，也涵盖社区建设与贡献流程。",
+      "tags": [
+        "开源",
+        "贡献指南"
+      ],
+      "icon": "OS",
+      "iconColor": "#a9dbb0",
+      "priority": 8
+    },
+    {
+      "id": "cncf-projects",
+      "categoryId": "opensource",
+      "title": "CNCF 项目目录",
+      "url": "https://www.cncf.io/projects/",
+      "description": "浏览云原生计算基金会的开源项目，按项目成熟度了解相关生态。",
+      "tags": [
+        "云原生",
+        "开源项目"
+      ],
+      "icon": "CN",
+      "iconColor": "#a6c9ef",
+      "priority": 7
+    },
+    {
+      "id": "obsidian",
+      "categoryId": "productivity",
+      "title": "Obsidian",
+      "url": "https://obsidian.md/",
+      "description": "以本地 Markdown 文件管理笔记和知识链接，适合长期整理个人资料。",
+      "tags": [
+        "笔记",
+        "知识管理"
+      ],
+      "icon": "OB",
+      "iconColor": "#c7a9ff",
+      "priority": 18
+    },
+    {
+      "id": "joplin",
+      "categoryId": "productivity",
+      "title": "Joplin",
+      "url": "https://joplinapp.org/",
+      "description": "开源笔记应用，可保存网页、整理多媒体笔记并在设备之间同步。",
+      "tags": [
+        "笔记",
+        "开源软件"
+      ],
+      "icon": "JP",
+      "iconColor": "#9ebdff",
+      "priority": 17
+    },
+    {
+      "id": "todoist",
+      "categoryId": "productivity",
+      "title": "Todoist",
+      "url": "https://www.todoist.com/",
+      "description": "任务与待办事项管理工具，支持项目、提醒和团队协作。",
+      "tags": [
+        "待办事项",
+        "任务管理"
+      ],
+      "icon": "TD",
+      "iconColor": "#f0a1a1",
+      "priority": 16
+    },
+    {
+      "id": "raindrop",
+      "categoryId": "productivity",
+      "title": "Raindrop.io",
+      "url": "https://raindrop.io/",
+      "description": "集中保存并整理网页书签，可按集合和标签建立自己的资源库。",
+      "tags": [
+        "书签管理",
+        "收藏"
+      ],
+      "icon": "RD",
+      "iconColor": "#8bc9ff",
+      "priority": 15
+    },
+    {
+      "id": "ollama",
+      "categoryId": "ai",
+      "title": "Ollama",
+      "url": "https://ollama.com/",
+      "description": "在本机运行开放权重模型的工具，也提供模型浏览与开发集成入口。",
+      "tags": [
+        "本地模型",
+        "人工智能"
+      ],
+      "icon": "OL",
+      "iconColor": "#e7ebef",
+      "priority": 18
+    },
+    {
+      "id": "google-ai-studio",
+      "categoryId": "ai",
+      "title": "Google AI Studio",
+      "url": "https://aistudio.google.com/",
+      "description": "Google 的生成式 AI 模型实验与开发入口，可测试提示词并探索 API。",
+      "tags": [
+        "模型实验",
+        "人工智能"
+      ],
+      "icon": "AI",
+      "iconColor": "#a4bdff",
+      "priority": 16
+    }
+  ]
+}

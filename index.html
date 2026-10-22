@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content="发现值得收藏的工具、灵感与知识资源。" />
+    <title>资源星图</title>
+    <!-- 浏览器标签页图标沿用页头的星轨标志；SVG 在高分辨率屏幕上仍保持清晰。 -->
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="modulepreload" href="js/config.js" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <!-- 首屏先渲染全屏加载层；主站点保持 hidden，配置成功前不会闪现。 -->
+    <div class="boot-screen" id="boot-screen" role="status" aria-live="polite">
+      <div class="boot-visual" aria-hidden="true">
+        <span class="boot-orbit boot-orbit--outer"></span>
+        <span class="boot-orbit boot-orbit--middle"></span>
+        <span class="boot-orbit boot-orbit--inner"></span>
+        <span class="boot-core"><span></span></span>
+        <i class="boot-node boot-node--top"></i>
+        <i class="boot-node boot-node--right"></i>
+        <i class="boot-node boot-node--bottom"></i>
+        <i class="boot-node boot-node--left"></i>
+      </div>
+      <h1>正在连接资源星图</h1>
+      <p>正在加载站点配置<span class="loading-dots" aria-hidden="true">...</span></p>
+    </div>
+
+    <!-- 错误页同样是全屏状态，不会暴露未完成配置的页面。 -->
+    <div class="error-screen" id="error-screen" role="alert" hidden>
+      <div class="error-symbol" aria-hidden="true"><span>!</span></div>
+      <h1>配置加载失败</h1>
+      <p id="error-message">请检查配置地址或网络连接。</p>
+      <button class="outline-button retry-button" id="retry-button" type="button">重试</button>
+    </div>
+
+    <div class="site-shell" id="app" hidden>
+      <div class="ambient ambient--left" aria-hidden="true"></div>
+      <div class="ambient ambient--right" aria-hidden="true"></div>
+      <div class="orbit-decoration orbit-decoration--left" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="orbit-decoration orbit-decoration--right" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <header class="site-header page-width">
+        <a class="brand" href="./" aria-label="返回首页">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span id="site-name">资源星图</span>
+        </a>
+        <button class="header-link" id="about-button" type="button">关于本站</button>
+      </header>
+
+      <main>
+        <section class="hero page-width" aria-labelledby="hero-title">
+          <h1 id="hero-title">探索值得收藏的资源</h1>
+          <p id="hero-subtitle">让工具、灵感与知识触手可及</p>
+
+          <label class="search-box" for="resource-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            <input id="resource-search" type="search" autocomplete="off" placeholder="搜索资源、关键词或标签…" />
+            <kbd class="search-hint">/</kbd>
+          </label>
+
+          <div class="category-navigation" id="category-navigation">
+            <button class="category-more outline-button" id="category-more" type="button" aria-expanded="false" aria-controls="category-panel">
+              <span id="category-more-label">全部分类</span><span class="category-more__mobile-label" aria-hidden="true">全部分类</span><span class="chevron" aria-hidden="true"></span>
+            </button>
+            <div class="quick-categories" id="quick-categories" aria-label="快捷分类"></div>
+            <div class="category-panel" id="category-panel" role="dialog" aria-labelledby="category-panel-title" hidden>
+              <div class="category-panel__top">
+                <div>
+                  <h2 id="category-panel-title">浏览分类</h2>
+                  <p class="category-panel__summary" id="category-panel-summary"></p>
+                </div>
+                <button class="icon-button" id="category-close" type="button" aria-label="关闭分类面板">×</button>
+              </div>
+              <label class="category-search" for="category-search-input">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                <input id="category-search-input" type="search" autocomplete="off" placeholder="搜索分类…" />
+              </label>
+              <div class="category-list" id="category-list"></div>
+              <p class="category-empty" id="category-empty" hidden>没有找到匹配的分类</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="resources-section page-width" aria-labelledby="resources-heading">
+          <div class="results-heading">
+            <h2 id="resources-heading">精选资源</h2>
+            <span id="result-count" aria-live="polite"></span>
+          </div>
+          <div class="resource-grid" id="resource-grid"></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span class="empty-state__icon" aria-hidden="true">⌕</span>
+            <h3>没有找到相关资源</h3>
+            <p>试试其他关键词，或切换分类。</p>
+            <button class="outline-button" id="clear-filters" type="button">清除筛选</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer page-width">
+        <div class="site-footer__tagline">
+          <span aria-hidden="true"></span><p id="footer-text">优质资源 · 连接更大的可能</p><span aria-hidden="true"></span>
+        </div>
+        <div>
+          <a  href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+            粤ICP备17077799号-1
+          </a>
+        </div>
+      </footer>
+      <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部" title="回到顶部" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10l6-6 6 6M12 4v16" /></svg>
+      </button>
+    </div>
+
+    <!-- 原生 dialog 提供焦点管理、Esc 关闭和遮罩；移动端由 CSS 变为底部详情层。 -->
+    <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title">
+      <button class="detail-close icon-button" id="detail-close" type="button" aria-label="关闭详情">×</button>
+      <div class="detail-header">
+        <div class="resource-icon detail-icon" id="detail-icon" aria-hidden="true"></div>
+        <div><div class="detail-title-line"><h2 id="detail-title"></h2><span class="detail-category" id="detail-category"></span></div></div>
+      </div>
+      <div class="detail-body">
+        <h3>资源介绍</h3>
+        <p id="detail-description"></p>
+        <div class="detail-tags" id="detail-tags"></div>
+      </div>
+      <div class="detail-actions">
+        <a class="primary-button" id="detail-visit" href="#" target="_blank" rel="noopener noreferrer">访问资源 <span aria-hidden="true">↗</span></a>
+        <button class="outline-button detail-secondary" id="detail-dismiss" type="button">关闭</button>
+      </div>
+    </dialog>
+
+    <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+      <button class="detail-close icon-button" id="about-close" type="button" aria-label="关闭关于本站">×</button>
+      <h2 id="about-title">关于本站</h2>
+      <p id="about-content"></p>
+      <button class="outline-button" id="about-dismiss" type="button">关闭</button>
+    </dialog>
+
+    <noscript><div class="noscript-message">此站点需要启用 JavaScript 才能加载配置和资源列表。</div></noscript>
+  </body>
+</html>

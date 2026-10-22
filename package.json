@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/config.test.js",
+    "test:browser": "node tests/browser-check.mjs"
+  }
+}
