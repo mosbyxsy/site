@@ -9,6 +9,7 @@
     "accentColor": "#50e4f6"
   },
   "categories": [
+    { "id": "mosby", "name": "Mosby 站点" },
     { "id": "development", "name": "开发工具" },
     { "id": "online-tools", "name": "在线工具" },
     { "id": "design", "name": "设计灵感" },
@@ -25,6 +26,115 @@
     { "id": "data", "name": "数据资源" }
   ],
   "resources": [
+    {
+      "id": "mosby-weblog",
+      "categoryId": "mosby",
+      "title": "Mosby 个人博客",
+      "url": "https://weblog.mosby.top/",
+      "description": "Mosby 的个人博客",
+      "tags": ["Mosby", "个人博客", "文章阅读"],
+      "iconUrl": "https://weblog.mosby.top/favicon.ico",
+      "icon": "WB"
+    },
+    {
+      "id": "mosby-json",
+      "categoryId": "mosby",
+      "title": "JSON Workbench",
+      "url": "https://json.mosby.top/",
+      "description": "在浏览器本地格式化、压缩和树形编辑 JSON，支持结构化差异对比，以及 JSON Schema、TypeScript 和 Mock 数据转换。",
+      "tags": ["Mosby", "JSON", "格式化", "结构对比", "本地处理"],
+      "iconUrl": "https://json.mosby.top/assets/icons/favicon.svg",
+      "icon": "JS"
+    },
+    {
+      "id": "mosby-forgepix",
+      "categoryId": "mosby",
+      "title": "ForgePix · 本地图片编辑器",
+      "url": "https://forgepix.mosby.top/",
+      "description": "完全在本地处理图片，支持裁剪、涂鸦、箭头、高亮、马赛克、文字、水印和序号注释，并可压缩导出 PNG、JPEG、WebP。图片无需上传。",
+      "tags": ["Mosby", "图片编辑", "标注", "图片压缩", "本地处理"],
+      "iconUrl": "https://forgepix.mosby.top/icon.svg",
+      "icon": "FP"
+    },
+    {
+      "id": "mosby-idparse",
+      "categoryId": "mosby",
+      "title": "身份证号码解析器",
+      "url": "https://idparse.mosby.top/",
+      "description": "离线解析中国大陆公民身份证号码中的登记地区、性别和出生日期，校验编码规则，并支持 15 位与 18 位号码转换。号码不上传；规则校验不能证明证件或持证人真实存在。",
+      "tags": ["Mosby", "身份证解析", "格式校验", "离线工具"],
+      "iconUrl": "https://idparse.mosby.top/assets/favicon.png",
+      "icon": "ID"
+    },
+    {
+      "id": "mosby-2fa",
+      "categoryId": "mosby",
+      "title": "岚盾 · 离线 2FA 验证器",
+      "url": "https://2fa.mosby.top/",
+      "description": "在当前设备生成 TOTP 动态验证码，使用主口令和 AES-256-GCM 加密保存密钥。支持账户管理、自动锁定和加密备份，无需注册或云端同步。",
+      "tags": ["Mosby", "2FA", "TOTP", "离线验证器", "加密备份"],
+      "iconUrl": "https://2fa.mosby.top/assets/icons/logo.svg",
+      "icon": "2F"
+    },
+    {
+      "id": "mosby-ht",
+      "categoryId": "mosby",
+      "title": "Heartwritten",
+      "url": "https://ht.mosby.top/",
+      "description": "以代码书写的情书，站点主题为“A Love Letter Written in Code”。",
+      "tags": ["Mosby", "Heartwritten", "创意表达"],
+      "icon": "HT"
+    },
+    {
+      "id": "mosby-qrcode",
+      "categoryId": "mosby",
+      "title": "码上 · 二维码生成与解析",
+      "url": "https://qrcode.mosby.top/",
+      "description": "本地生成和解析二维码，支持点阵样式、渐变颜色、中心 Logo、容错等级及 PNG/SVG 导出。可上传、拖放或粘贴二维码图片进行识别，内容在当前设备处理。",
+      "tags": ["Mosby", "二维码", "生成与解析", "SVG", "本地处理"],
+      "iconUrl": "https://qrcode.mosby.top/favicon.svg",
+      "icon": "QR"
+    },
+    {
+      "id": "mosby-base64",
+      "categoryId": "mosby",
+      "title": "Pic64 · 图片 Base64 转换",
+      "url": "https://base64.mosby.top/",
+      "description": "在浏览器本地完成图片与 Base64 双向转换，支持预览、复制和下载，并可进行裁剪、缩放、压缩及图片格式转换。",
+      "tags": ["Mosby", "Base64", "图片转换", "图片压缩", "本地处理"],
+      "iconUrl": "https://base64.mosby.top/assets/pic64-icon-180.png",
+      "icon": "64"
+    },
+    {
+      "id": "mosby-excel",
+      "categoryId": "mosby",
+      "title": "轻表格 · Excel / CSV 查看器",
+      "url": "https://excel.mosby.top/",
+      "description": "只读查看 XLSX、XLSM、XLS、CSV 和 TSV，支持工作表切换、搜索、原始视图与数据视图，以及点击复制。支持本地文件和允许跨域读取的在线文件，本地文件无需上传。",
+      "tags": ["Mosby", "Excel", "CSV", "表格预览", "本地处理"],
+      "iconUrl": "https://excel.mosby.top/favicon.svg",
+      "icon": "XL"
+    },
+    {
+      "id": "mosby-clock",
+      "categoryId": "mosby",
+      "title": "世界时钟",
+      "url": "https://clock.mosby.top/",
+      "description": "通过交互地球浏览各地城市时间，支持全球时区查询、跨时区时间转换、时长推算和按当地时间反查城市，可离线使用。",
+      "tags": ["Mosby", "世界时钟", "时区查询", "时间转换", "离线工具"],
+      "iconUrl": "https://clock.mosby.top/src/images/logo.svg",
+      "icon": "CL"
+    },
+    {
+      "id": "mosby-file",
+      "categoryId": "mosby",
+      "title": "数据站 · 文件浏览与预览",
+      "url": "https://file.mosby.top/",
+      "description": "以目录树浏览和搜索文件，支持类型筛选、排序及下载，可预览文本与代码、Markdown、CSV/TSV、Office 文档、PDF、图片、音频和视频。",
+      "tags": ["Mosby", "文件浏览", "文件预览", "文档", "下载"],
+      "iconUrl": "https://file.mosby.top/file-browser/logo.svg",
+      "icon": "FL"
+    },
     {
       "id": "mdn",
       "categoryId": "documentation",
